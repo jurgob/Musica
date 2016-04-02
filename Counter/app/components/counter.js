@@ -18,6 +18,15 @@ const styles = StyleSheet.create({
   }
 });
 
+const songs = [
+  {title: 'cestil' },
+  {title: 'cestil' },
+  {title: 'cestil' },
+  {title: 'cestil' },
+
+]
+
+
 export default class Counter extends Component {
   constructor(props) {
     super(props);
@@ -28,6 +37,8 @@ export default class Counter extends Component {
 
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        { songs.map((song) => <Text>{song.title}</Text> ) }
+
         <Text>{counter}</Text>
         <TouchableOpacity onPress={increment} style={styles.button}>
           <Text>up</Text>
